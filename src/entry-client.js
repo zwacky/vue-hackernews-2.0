@@ -2,10 +2,14 @@ import Vue from 'vue'
 import 'es6-promise/auto'
 import { createApp } from './app'
 import ProgressBar from './components/ProgressBar.vue'
+import Ionic, { IonicVueRouter } from '@modus/ionic-vue'
 
 // global progress bar
 const bar = Vue.prototype.$bar = new Vue(ProgressBar).$mount()
 document.body.appendChild(bar.$el)
+
+Vue.use(Ionic);
+Vue.use(IonicVueRouter);
 
 // a global mixin that calls `asyncData` when a route component's params change
 Vue.mixin({
