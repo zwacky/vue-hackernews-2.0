@@ -1,24 +1,47 @@
 <template>
-  <div id="app">
-    <header class="header">
-      <nav class="inner">
-        <router-link to="/" exact>
-          <img class="logo" src="~public/logo-48.png" alt="logo">
-        </router-link>
-        <router-link to="/top">Top</router-link>
-        <router-link to="/new">New</router-link>
-        <router-link to="/show">Show</router-link>
-        <router-link to="/ask">Ask</router-link>
-        <router-link to="/job">Jobs</router-link>
-        <a class="github" href="https://github.com/vuejs/vue-hackernews-2.0" target="_blank" rel="noopener">
-          Built with Vue.js
-        </a>
-      </nav>
-    </header>
+  <ion-app id="app">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button>
+            <router-link to="/" exact>
+              <img class="logo" src="~public/logo-48.png" alt="logo" />
+            </router-link>
+          </ion-button>
+        </ion-buttons>
+        <ion-buttons>
+          <ion-button>
+            <router-link to="/top">Top</router-link>
+          </ion-button>
+          <ion-button>
+            <router-link to="/new">New</router-link>
+          </ion-button>
+          <ion-button>
+            <router-link to="/show">Show</router-link>
+          </ion-button>
+          <ion-button>
+            <router-link to="/ask">Ask</router-link>
+          </ion-button>
+          <ion-button>
+            <router-link to="/job">Jobs</router-link>
+          </ion-button>
+          <ion-button>
+            <ion-icon name="logo-github"></ion-icon>
+              <a
+                href="https://github.com/vuejs/vue-hackernews-2.0"
+                target="_blank"
+                rel="noopener"
+              >
+                &nbsp;Built with Vue.js
+              </a>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
     <transition name="fade" mode="out-in">
       <router-view class="view"></router-view>
     </transition>
-  </div>
+  </ion-app>
 </template>
 
 <style lang="stylus">
@@ -27,7 +50,6 @@ body
   font-size 15px
   background-color lighten(#eceef1, 30%)
   margin 0
-  padding-top 55px
   color #34495e
   overflow-y scroll
 
